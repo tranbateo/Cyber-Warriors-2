@@ -4,7 +4,8 @@
 
 This project demonstrates a complete NFT ecosystem where users can **Mint** unique Heroes, **Trade** them on a global marketplace, and **Manage** their inventory with a dynamic rarity system.
 
-![Project Banner](https://via.placeholder.com/1000x300?text=IOTA+Warriors+Gameplay)
+![Uploading image.png…]()
+
 
 ---
 
