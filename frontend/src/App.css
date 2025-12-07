@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;500&display=swap');
+
+:root {
+  --primary: #00f2ff;
+  --secondary: #bd00ff;
+  --bg-dark: #050b14;
+  --card-bg: #0f1926;
+  --text-main: #e0f2fe;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(0, 242, 255, 0.1) 0%, transparent 20%),
+    radial-gradient(circle at 90% 80%, rgba(189, 0, 255, 0.1) 0%, transparent 20%);
+  min-height: 100vh;
+}
+
+.container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+
+/* NAVBAR */
+.navbar {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(15, 25, 38, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid var(--primary);
+  border-radius: 16px;
+  margin-bottom: 40px;
+  box-shadow: 0 0 20px rgba(0, 242, 255, 0.2);
+}
+
+.logo {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-links a {
+  color: #fff; text-decoration: none; margin: 0 15px; font-weight: 500;
+  transition: 0.3s; text-transform: uppercase; letter-spacing: 1px;
+}
+.nav-links a:hover { color: var(--primary); text-shadow: 0 0 8px var(--primary); }
+
+/* ADMIN PANEL */
+.admin-container {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 40px;
+}
+
+.panel-card {
+  background: var(--card-bg);
+  padding: 30px; border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.05);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; margin-bottom: 8px; color: var(--primary); font-family: 'Orbitron'; }
+
+input, select {
+  width: 100%; padding: 12px;
+  background: #02060b; border: 1px solid #334155;
+  color: white; border-radius: 8px; outline: none;
+  font-family: 'Orbitron'; letter-spacing: 1px;
+}
+input:focus { border-color: var(--secondary); box-shadow: 0 0 10px rgba(189, 0, 255, 0.3); }
+
+/* BUTTONS */
+.btn-neon {
+  width: 100%; padding: 15px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  border: none; border-radius: 8px;
+  color: white; font-weight: bold; font-size: 1.1rem;
+  cursor: pointer; text-transform: uppercase;
+  transition: transform 0.2s;
+}
+.btn-neon:hover { transform: translateY(-3px); box-shadow: 0 5px 20px rgba(0, 242, 255, 0.4); }
+
+.btn-sell {
+  background: transparent; border: 2px solid var(--secondary); color: var(--secondary);
+  padding: 8px 16px; border-radius: 6px; cursor: pointer; font-weight: bold; width: 100%; margin-top: 10px;
+}
+.btn-sell:hover { background: var(--secondary); color: white; }
+
+/* GRID LAYOUTS */
+.hero-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px;
+  max-height: 600px; overflow-y: auto; padding-right: 10px;
+}
+
+.hero-card {
+  background: rgba(255,255,255,0.03);
+  padding: 15px; border-radius: 12px; text-align: center;
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: 0.3s;
+}
+.hero-card:hover { border-color: var(--primary); transform: scale(1.02); }
+.hero-card img { width: 80px; height: 80px; border-radius: 50%; border: 3px solid var(--primary); margin-bottom: 10px; }
+
+/* MARKET PAGE */
+.market-header { text-align: center; margin-bottom: 40px; }
+.market-header h2 { font-family: 'Orbitron'; font-size: 3rem; margin: 0; color: white; text-shadow: 0 0 20px var(--secondary); }
+.price-tag { font-size: 1.4rem; color: #fbbf24; font-weight: bold; margin: 10px 0; }
+/* ... Giữ lại các phần cũ ... */
+
+/* --- THÊM PHẦN MỚI NÀY --- */
+
+/* Avatar Hero */
+.hero-avatar {
+  width: 100%;
+  height: 150px; /* Ảnh to rõ */
+  object-fit: cover;
+  border-radius: 10px;
+  background-color: #000;
+  border-bottom: 2px solid #333;
+}
+
+/* Hiệu ứng màu theo độ hiếm */
+.rarity-common {
+  border: 2px solid #ffffff !important;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+.rarity-uncommon { /* Xanh lá - Hơi hiếm */
+  border: 2px solid #22c55e !important;
+  box-shadow: 0 0 15px rgba(34, 197, 94, 0.4);
+}
+.rarity-rare { /* Vàng - Hiếm */
+  border: 2px solid #eab308 !important;
+  box-shadow: 0 0 15px rgba(234, 179, 8, 0.5);
+}
+.rarity-legendary { /* Đỏ - Siêu hiếm */
+  border: 2px solid #ef4444 !important;
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.6);
+}
+.rarity-mythical { /* Tím - Cực kì hiếm */
+  border: 2px solid #a855f7 !important;
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.8);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 20px rgba(168, 85, 247, 0.6); }
+  50% { box-shadow: 0 0 40px rgba(168, 85, 247, 1); }
+  100% { box-shadow: 0 0 20px rgba(168, 85, 247, 0.6); }
+}
+
+/* Badge hiển thị tên độ hiếm */
+.rarity-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 5px;
+  color: #000;
+  text-transform: uppercase;
+}

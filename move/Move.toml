@@ -1,0 +1,12 @@
+[package]
+name = "iota_hero"
+version = "0.0.1"
+
+[dependencies]
+# Quan trọng: Phải mở dòng này ra và trỏ vào nhánh 'devnet'
+Iota = { git = "https://github.com/iotaledger/iota.git", subdir = "crates/iota-framework/packages/iota-framework", rev = "devnet" }
+
+[addresses]
+iota_hero = "0x0"
+# Giữ nguyên địa chỉ framework chuẩn
+iota = "0x2"

@@ -1,0 +1,12 @@
+# Move build artifacts
+move/build/
+move/Move.lock
+
+# Node dependencies (Frontend)
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+
+# System files
+.DS_Store
+Thumbs.db
